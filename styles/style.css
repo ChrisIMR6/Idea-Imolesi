@@ -1,0 +1,224 @@
+/* general*/
+
+/* NOTA IMPORTANTE: Al haber seteado muchas cosas en "general" aún no he creado una media query para desktop,
+ se podría decir que todo lo que no sea mobile y tablet es considerado de escritorio(por el momento)
+ También han habido problemas con el nav del header, esto lo voy a solucionar pronto*/
+body{
+    color: antiquewhite;
+    background-color: black;
+}
+
+.main__container{
+  display: grid;
+  grid-template-areas:
+  "img_main parrafo_main";
+  grid-template-columns: 50%,50%;
+  grid-template-rows: auto,auto;
+}
+
+.index__main__grid{
+  grid-area: main;
+}
+
+
+.logo__header{
+  position:absolute;
+    margin:0px 15px 15px 10px;
+    left: 0;
+    display:inline;
+ 
+}
+
+#imagen__messi__main{
+  display: flex;
+      flex-direction: column;
+      align-items: center;
+    margin: 20px;
+    height: auto;
+    width: 60%;
+    float: left; 
+    grid-area:img_main;
+   }
+.main__parrafo{
+  display: flex;
+      flex-direction: column;
+      align-items: center;
+text-align:center;
+font-size: 60px;
+overflow: hidden;
+grid-area: parrafo_main;
+}
+
+  ul {
+  left: 0;
+  top: 50%;
+  text-align: center;
+  display: block;
+  background:none;
+  min-height: 100px;       
+}
+li {
+  display: inline-block;
+  height: 100%;
+}
+ li a {
+  display: inline-block;
+  color: white;
+  background:none;
+  line-height: 100px;          
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+  margin: 0;
+  height: 100%;} 
+
+  .tabla__messi{
+    align-content: center;
+     margin-top: 20px;
+    margin-bottom:200px ;
+  }
+
+  .footer{
+    grid-area: footer;
+    background-color: gray;
+  }
+  
+
+  .tabla__players__stats{
+    display: flex;
+    justify-content: center;
+  }
+  .tabla__stats{
+    display: flex;
+    justify-content: center;
+  }
+
+.instagram__logo,.facebook__logo,.youtube__logo {
+  margin-right: 20px;
+}
+
+.img__contacto{
+  display: flex;
+            flex-direction: column;
+            align-items: center;
+          margin: 20px;
+          height: auto;
+          width: 90%;
+          float: left;
+          position: relative;
+         }
+
+/* MOBILE */
+@media screen and (max-width:768px){
+body{
+  background-color: brown;
+}
+  .logo__header{
+    display: flex;
+    width: 150px;
+    height: 50px;
+  }
+
+  .flex__header{
+      justify-content: center;}
+
+    ul{
+      flex-wrap:wrap;}
+
+      #imagen__messi__main ,.img__contacto {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+          margin: 20px;
+          height: auto;
+          width: 90%;
+          float: left;
+         }
+      .main__parrafo{
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+        justify-content: center;
+      text-align:center;
+      font-size: 30px;
+      overflow:hidden;
+        float:right;}
+
+        .nav__menu{
+          display: inline-flex;
+        }
+        .grid__header{
+          /* grid-area: header; */
+          display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }                                 /* Fin MOBILE */
+  
+  .grid__header{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+/* TABLET */
+  @media screen and (min-width:769px) and (max-width:1023px) {
+
+    body{
+      background-color: rgb(58, 58, 58);
+    }
+
+    .logo__header{
+      display: flex;
+      width: 150px;
+      height: 50px;
+
+    }
+
+    .flex__header{
+      justify-content: center;}
+
+    ul{
+      flex-wrap:wrap;}
+
+      #imagen__messi__main{
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+          margin: 20px;
+          height: auto;
+          width: 90%;
+          float: left;
+         }
+      .main__parrafo{
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+        justify-content: center;
+      text-align:center;
+      font-size: 30px;
+      overflow:hidden;
+        float:right;}
+
+        .nav__menu{
+          display: inline-flex;
+        }
+        .grid__header{
+          grid-area: header;
+          display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tabla__players__stats{
+          overflow: scroll;                   
+        }
+  } /* FIN TABLET */                                
