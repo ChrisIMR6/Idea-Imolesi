@@ -109,6 +109,43 @@ li {
           position: relative;
          }
 
+/* Desktop (animación) */
+
+.main__parrafo{background-image: radial-gradient(blue, white, red, yellow)}
+@media screen and (min-width:1024px) {
+  .parrafo-animado-main {
+    -webkit-animation: parrafo-animado 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+            animation: parrafo-animado 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+  }
+ 
+@-webkit-keyframes parrafo-animado {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes parrafo-animado {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+}
+
 /* MOBILE */
 @media screen and (max-width:768px){
 body{
